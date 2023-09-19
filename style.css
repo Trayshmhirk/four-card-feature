@@ -1,0 +1,139 @@
+/* Base Styles*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: hsl(0, 0%, 98%);
+    --body-txt-color: hsl(234, 12%, 34%);
+    --para-txt-color: hsl(229, 6%, 66%);
+    --sect-box-bg-color: hsl(0, 0%, 100%);
+    --sect-box-box-shadow: 0px 9px 12px hsla(229, 6%, 66%, 0.315);
+    --super-border-top: hsl(180, 62%, 55%);
+    --team-border-top:  hsl(0, 78%, 62%);
+    --karma-border-top: hsl(34, 97%, 64%);
+    --calc-border-top: hsl(212, 86%, 64%);
+    --font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: var(--bg-color);
+    font-size: 15px;
+    padding: 1.5em;
+    color: var(--body-txt-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* padding-top: 3em; */
+}
+
+p{
+    font-size: .8em;
+    color: var(--para-txt-color);
+}
+
+/*Main Styles*/
+
+header{
+    max-width: 400px;
+    text-align: center;
+    margin: 2em auto;
+}
+
+header > h1{
+    font-size: 1.8em;
+    font-weight: 200;
+}
+
+header > h2{
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: .7em;
+}
+
+section{
+    display: flex;
+    gap: 1.5em;
+}
+
+section .section-box{
+    background: var(--sect-box-bg-color);
+    max-width: 300px;
+    height: 13em;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-shadow: var(--sect-box-box-shadow);
+    margin: 1.5em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section .section-box h3{
+    margin-bottom: .5em;
+    font-weight: 600;
+}
+
+section .section-box p{
+    margin-bottom: 2.8em;
+}
+
+section .section-box > img{
+    width: 3em;
+    align-self: flex-end;
+}
+
+section .supervisor, section .calculator{
+    align-self: center;
+}
+
+section .supervisor{
+    border-top: 4px solid var(--super-border-top);
+}
+
+section .builder{
+    border-top: 4px solid var(--team-border-top);
+}
+
+section .karma{
+    border-top: 4px solid var(--karma-border-top);
+}
+
+section .calculator{
+    border-top: 4px solid var(--calc-border-top);
+}
+
+/* Media Queries*/
+
+@media screen and (max-width: 768px) {
+    body{
+        height: 100%;
+        padding: 4.5em 1.5em;
+    }
+
+    header{
+        margin: 0;
+        margin-bottom: 4em;
+        max-width: 300px;
+    }
+
+    header > h1{
+        font-size: 1.6em;
+    }
+
+    header > h2{
+        font-size: 1.6em;
+    }
+
+    header > p{
+        font-size: 1em;
+    }
+
+    section{
+        display: unset;
+    }
+}
